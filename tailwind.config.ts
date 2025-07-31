@@ -52,6 +52,14 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				nutria: {
+					green: 'hsl(var(--nutria-green))',
+					'green-light': 'hsl(var(--nutria-green-light))',
+					brown: 'hsl(var(--nutria-brown))',
+					'brown-dark': 'hsl(var(--nutria-brown-dark))',
+					beige: 'hsl(var(--nutria-beige))',
+					'beige-light': 'hsl(var(--nutria-beige-light))',
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',

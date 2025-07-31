@@ -8,35 +8,60 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* NutrIA Brand Colors - Natural & Warm Palette */
+    --background: 35 20% 98%;
+    --foreground: 25 15% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 35 25% 96%;
+    --card-foreground: 25 15% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 35 25% 96%;
+    --popover-foreground: 25 15% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Warm Green */
+    --primary: 75 40% 45%;
+    --primary-foreground: 35 20% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Soft Beige */
+    --secondary: 35 30% 88%;
+    --secondary-foreground: 25 15% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted - Light Beige */
+    --muted: 35 20% 92%;
+    --muted-foreground: 25 8% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Warm Brown */
+    --accent: 25 25% 65%;
+    --accent-foreground: 35 20% 98%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 35 20% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 35 15% 85%;
+    --input: 35 15% 90%;
+    --ring: 75 40% 45%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom NutrIA Design Tokens */
+    --nutria-green: 75 40% 45%;
+    --nutria-green-light: 75 35% 65%;
+    --nutria-brown: 25 25% 65%;
+    --nutria-brown-dark: 25 30% 35%;
+    --nutria-beige: 35 30% 88%;
+    --nutria-beige-light: 35 20% 95%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(75 40% 45%), hsl(75 35% 65%));
+    --gradient-warm: linear-gradient(135deg, hsl(35 30% 88%), hsl(35 20% 95%));
+    --gradient-hero: linear-gradient(135deg, hsl(35 20% 98%) 0%, hsl(75 35% 95%) 100%);
+    
+    /* Shadows */
+    --shadow-warm: 0 4px 20px -4px hsl(25 25% 65% / 0.25);
+    --shadow-soft: 0 2px 15px -3px hsl(35 15% 85% / 0.3);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 
