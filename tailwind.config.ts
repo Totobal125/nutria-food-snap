@@ -59,6 +59,7 @@ export default {
 					'brown-dark': 'hsl(var(--nutria-brown-dark))',
 					beige: 'hsl(var(--nutria-beige))',
 					'beige-light': 'hsl(var(--nutria-beige-light))',
+					accent: 'hsl(var(--nutria-accent))',
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
