@@ -195,6 +195,8 @@ const Header = () => {
                 Descargar App
               </Button>
             </a>
+            {/* Espaciado adicional al final del menú */}
+            <div className="pt-4"></div>
           </nav>
         </div>
       )}
