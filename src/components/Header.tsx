@@ -87,8 +87,18 @@ const Header = () => {
           </button>
         </nav>
         
-        {/* Desktop CTA Button */}
-        <div className="flex items-center flex-shrink-0">
+        {/* Desktop CTA Buttons */}
+        <div className="flex items-center flex-shrink-0 space-x-3">
+          <a 
+            href="/portal-nutricionistas" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="hidden sm:flex"
+          >
+            <Button variant="outline" size="sm" className="hover:bg-nutria-brown/10 hover:border-nutria-brown transition-all duration-300">
+              Portal Nutricionistas
+            </Button>
+          </a>
           <a 
             href="https://apps.apple.com/cl/app/nutria/id6744851977" 
             target="_blank" 
@@ -166,10 +176,20 @@ const Header = () => {
               Testimonios
             </button>
             <a 
+              href="/portal-nutricionistas" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-full"
+            >
+              <Button variant="outline" size="lg" className="w-full hover:bg-nutria-brown/10 hover:border-nutria-brown transition-all duration-300">
+                Portal Nutricionistas
+              </Button>
+            </a>
+            <a 
               href="https://apps.apple.com/cl/app/nutria/id6744851977" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-full mt-6"
+              className="w-full mt-4"
             >
               <Button variant="cta" size="lg" className="w-full shadow-xl hover:shadow-nutria-green/30">
                 Descargar App
