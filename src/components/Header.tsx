@@ -126,7 +126,7 @@ const Header = () => {
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="md:hidden bg-background/95 backdrop-blur-md border-t border-border/50 shadow-lg">
-          <nav className="container mx-auto px-4 py-6 space-y-4">
+          <nav className="container mx-auto px-6 py-8 space-y-6">
             {/* Mobile Logo */}
             <div className="flex justify-center pb-4 border-b border-border/30">
                                     <img
@@ -137,7 +137,7 @@ const Header = () => {
             </div>
             <button 
               onClick={() => handleNavClick('que-es')}
-              className={`w-full text-left block transition-all duration-300 py-3 px-2 rounded-lg hover:bg-accent/50 font-medium ${
+              className={`w-full text-left block transition-all duration-300 py-4 px-4 rounded-xl hover:bg-accent/50 font-medium ${
                 activeSection === 'que-es' 
                   ? 'text-nutria-green bg-nutria-green/10' 
                   : 'text-muted-foreground hover:text-foreground'
@@ -147,7 +147,7 @@ const Header = () => {
             </button>
             <button 
               onClick={() => handleNavClick('como-funciona')}
-              className={`w-full text-left block transition-all duration-300 py-3 px-2 rounded-lg hover:bg-accent/50 font-medium ${
+              className={`w-full text-left block transition-all duration-300 py-4 px-4 rounded-xl hover:bg-accent/50 font-medium ${
                 activeSection === 'como-funciona' 
                   ? 'text-nutria-green bg-nutria-green/10' 
                   : 'text-muted-foreground hover:text-foreground'
@@ -157,7 +157,7 @@ const Header = () => {
             </button>
             <button 
               onClick={() => handleNavClick('beneficios')}
-              className={`w-full text-left block transition-all duration-300 py-3 px-2 rounded-lg hover:bg-accent/50 font-medium ${
+              className={`w-full text-left block transition-all duration-300 py-4 px-4 rounded-xl hover:bg-accent/50 font-medium ${
                 activeSection === 'beneficios' 
                   ? 'text-nutria-green bg-nutria-green/10' 
                   : 'text-muted-foreground hover:text-foreground'
@@ -167,7 +167,7 @@ const Header = () => {
             </button>
             <button 
               onClick={() => handleNavClick('testimonios')}
-              className={`w-full text-left block transition-all duration-300 py-3 px-2 rounded-lg hover:bg-accent/50 font-medium ${
+              className={`w-full text-left block transition-all duration-300 py-4 px-4 rounded-xl hover:bg-accent/50 font-medium ${
                 activeSection === 'testimonios' 
                   ? 'text-nutria-green bg-nutria-green/10' 
                   : 'text-muted-foreground hover:text-foreground'
@@ -179,7 +179,7 @@ const Header = () => {
               href="/portal-nutricionistas" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-full"
+              className="w-full px-2"
             >
               <Button variant="warm" size="lg" className="w-full shadow-xl hover:shadow-nutria-brown/30">
                 Portal Nutricionistas
@@ -189,14 +189,14 @@ const Header = () => {
               href="https://apps.apple.com/cl/app/nutria/id6744851977" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-full mt-8"
+              className="w-full mt-10 px-2"
             >
               <Button variant="cta" size="lg" className="w-full shadow-xl hover:shadow-nutria-green/30">
                 Descargar App
               </Button>
             </a>
             {/* Espaciado adicional al final del menú */}
-            <div className="pt-4"></div>
+            <div className="pt-6"></div>
           </nav>
         </div>
       )}
