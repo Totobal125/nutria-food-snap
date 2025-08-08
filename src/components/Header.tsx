@@ -95,7 +95,7 @@ const Header = () => {
             rel="noopener noreferrer"
             className="hidden sm:flex"
           >
-            <Button variant="outline" size="sm" className="hover:bg-nutria-accent/10 hover:border-nutria-accent hover:text-nutria-accent transition-all duration-300">
+            <Button variant="warm" size="sm" className="hover:shadow-nutria-brown/30 shadow-lg">
               Portal Nutricionistas
             </Button>
           </a>
@@ -181,7 +181,7 @@ const Header = () => {
               rel="noopener noreferrer"
               className="w-full"
             >
-              <Button variant="outline" size="lg" className="w-full hover:bg-nutria-accent/10 hover:border-nutria-accent hover:text-nutria-accent transition-all duration-300">
+              <Button variant="warm" size="lg" className="w-full shadow-xl hover:shadow-nutria-brown/30">
                 Portal Nutricionistas
               </Button>
             </a>
