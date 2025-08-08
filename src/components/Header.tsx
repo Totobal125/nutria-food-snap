@@ -189,7 +189,7 @@ const Header = () => {
               href="https://apps.apple.com/cl/app/nutria/id6744851977" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-full mt-4"
+              className="w-full mt-6"
             >
               <Button variant="cta" size="lg" className="w-full shadow-xl hover:shadow-nutria-green/30">
                 Descargar App
