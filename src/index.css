@@ -1,0 +1,363 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* NutrIA Professional Design System - Premium Palette */
+    --background: 0 0% 100%;
+    --foreground: 224 71% 4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71% 4%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 4%;
+
+    /* Primary - Sophisticated Emerald */
+    --primary: 85 40% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Refined Slate */
+    --secondary: 210 40% 98%;
+    --secondary-foreground: 222 84% 5%;
+
+    /* Muted - Premium Gray */
+    --muted: 210 40% 98%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Accent - Deep Slate */
+    --accent: 210 40% 98%;
+    --accent-foreground: 222 84% 5%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 85 40% 45%;
+
+    --radius: 0.75rem;
+
+    /* Premium NutrIA Design Tokens - Professional Grade */
+    --nutria-green: 85 40% 45%;           /* Natural olive green #7A9F45 */
+    --nutria-green-light: 85 40% 60%;    /* Light olive green */
+    --nutria-green-dark: 85 50% 30%;     /* Dark olive green */
+    --nutria-brown: 25 32% 55%;           /* Warm earth tone */
+    --nutria-brown-dark: 25 45% 35%;      /* Deep chocolate */
+    --nutria-beige: 45 25% 94%;           /* Sophisticated cream */
+    --nutria-beige-light: 60 15% 97%;     /* Pure cream */
+    --nutria-accent: 220 39% 11%;         /* Premium navy */
+    --nutria-gray: 215 16% 47%;           /* Professional gray */
+    --nutria-gray-light: 210 20% 95%;     /* Subtle background */
+    --nutria-white-light: 0 0% 100%;     /* Subtle background */
+    
+    /* Professional Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(85 40% 45%), hsl(85 40% 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 100%);
+    --gradient-emerald: linear-gradient(135deg, hsl(85 50% 30%), hsl(85 40% 45%));
+    --gradient-professional: linear-gradient(135deg, hsl(220 39% 11%), hsl(85 40% 45%));
+    
+    /* Premium Shadows */
+    --shadow-premium: 0 8px 32px -4px hsl(85 40% 45% / 0.2);
+    --shadow-soft: 0 4px 24px -6px hsl(220 39% 11% / 0.1);
+    --shadow-elegant: 0 2px 16px -4px hsl(215 16% 47% / 0.15);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem; /* Para compensar el header fijo */
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* Mejoras adicionales para botones */
+  .button-shine {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .button-shine::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+  }
+  
+  .button-shine:hover::before {
+    left: 100%;
+  }
+  
+  /* Animación de pulso para botones CTA */
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 5px rgba(122, 159, 69, 0.4);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(122, 159, 69, 0.6), 0 0 30px rgba(122, 159, 69, 0.4);
+    }
+  }
+  
+  .pulse-glow {
+    animation: pulse-glow 2s infinite;
+  }
+  
+  /* Mejora para glassmorphism */
+  .glass-button {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Essential animations only - Professional & Clean */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  @keyframes blob {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(20px, -30px) scale(1.05);
+    }
+    66% {
+      transform: translate(-15px, 15px) scale(0.95);
+    }
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200px 0;
+    }
+    100% {
+      background-position: calc(200px + 100%) 0;
+    }
+  }
+
+  /* Professional animation classes */
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float 4s ease-in-out infinite;
+    animation-delay: 2s;
+  }
+
+  .animate-blob {
+    animation: blob 8s ease-in-out infinite;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .animate-shimmer {
+    background: linear-gradient(90deg, 
+      transparent, 
+      rgba(255,255,255,0.3), 
+      transparent
+    );
+    background-size: 200px 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float 3s ease-in-out infinite;
+    animation-delay: 1.5s;
+  }
+
+  .animate-shimmer {
+    background: linear-gradient(90deg, 
+      transparent, 
+      rgba(255,255,255,0.4), 
+      transparent
+    );
+    background-size: 200px 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  .animate-typewriter {
+    overflow: hidden;
+    border-right: 3px solid currentColor;
+    white-space: nowrap;
+    animation: typewriter 3s steps(40, end), blink 0.75s step-end infinite;
+  }
+
+  /* Delays para efectos escalonados */
+  .delay-100 { animation-delay: 0.1s; }
+  .delay-200 { animation-delay: 0.2s; }
+  .delay-300 { animation-delay: 0.3s; }
+  .delay-400 { animation-delay: 0.4s; }
+  .delay-500 { animation-delay: 0.5s; }
+  .delay-600 { animation-delay: 0.6s; }
+  .delay-700 { animation-delay: 0.7s; }
+  .delay-800 { animation-delay: 0.8s; }
+
+  /* Estados iniciales para animaciones */
+  .opacity-0-animate {
+    opacity: 0;
+  }
+
+  /* Professional hover effects */
+  .hover-lift {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-premium);
+  }
+
+  .hover-glow {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-glow:hover {
+    box-shadow: var(--shadow-premium);
+    transform: scale(1.02);
+  }
+
+  .hover-scale {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+
+  .hover-elegant {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-elegant:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-elegant);
+  }
+
+  /* Gradientes animados */
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 4s ease infinite;
+  }
+
+  /* Efectos especiales para palabras clave del slogan */
+  .slogan-keyword {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    position: relative;
+    transition: transform 0.2s ease;
+  }
+
+  .slogan-keyword:hover {
+    transform: scale(1.05);
+  }
+
+  /* Responsive keyword sizing mejorado */
+  @media (max-width: 640px) {
+    .slogan-keyword {
+      display: block;
+      margin: 0.2em 0;
+    }
+  }
+}

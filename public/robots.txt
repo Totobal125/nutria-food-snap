@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://nutria-food-snap.vercel.app/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1

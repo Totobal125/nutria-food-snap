@@ -1,0 +1,30 @@
+{
+  "name": "nutrIA - Comer sano es fácil, rico y para todos",
+  "short_name": "nutrIA",
+  "description": "Con solo una foto, entiende lo que comes con inteligencia artificial",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#7A9F45",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["health", "lifestyle", "nutrition"],
+  "lang": "es",
+  "dir": "ltr"
+}
