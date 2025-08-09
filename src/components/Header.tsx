@@ -175,26 +175,28 @@ const Header = () => {
             >
               Testimonios
             </button>
-            <a 
-              href="/portal-nutricionistas" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="w-full px-2"
-            >
-              <Button variant="warm" size="lg" className="w-full shadow-xl hover:shadow-nutria-brown/30">
-                Portal Nutricionistas
-              </Button>
-            </a>
-            <a 
-              href="https://apps.apple.com/cl/app/nutria/id6744851977" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="w-full mt-16 px-2"
-            >
-              <Button variant="cta" size="lg" className="w-full shadow-xl hover:shadow-nutria-green/30">
-                Descargar App
-              </Button>
-            </a>
+            <div className="flex flex-col gap-6 px-2">
+              <a 
+                href="/portal-nutricionistas" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-full"
+              >
+                <Button variant="warm" size="lg" className="w-full shadow-xl hover:shadow-nutria-brown/30">
+                  Portal Nutricionistas
+                </Button>
+              </a>
+              <a 
+                href="https://apps.apple.com/cl/app/nutria/id6744851977" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-full"
+              >
+                <Button variant="cta" size="lg" className="w-full shadow-xl hover:shadow-nutria-green/30">
+                  Descargar App
+                </Button>
+              </a>
+            </div>
             {/* Espaciado adicional al final del menú */}
             <div className="pt-6"></div>
           </nav>
